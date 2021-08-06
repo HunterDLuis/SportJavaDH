@@ -10,6 +10,13 @@ public class Person {
     String address;
     char gender;
     int age;
+
+    public Person(){};
+
+    public Person(String name){
+        this.name = name;
+    }
+
     public Person(String name, int ci, String birthDate, int phone, String address, char gender) {
         this.name = name;
         this.ci = ci;
@@ -19,8 +26,12 @@ public class Person {
         this.gender = gender;
     }
 
+    public String getName() {
+        return name;
+    }
+
     String displayData(){
-        return "Name is: "+name+" and my address is: "+address;
+        return "Name is: "+getName()+" and my address is: "+address;
     }
 
     public String getBirthDate() {
