@@ -11,6 +11,7 @@ public class Main {
                 "2. Gets list of player"+"\n"+
                 "3. VIew that team going to play"+"\n"+
                 "4. Gets winner team of the play of basketball"+"\n"+
+                "5. Gets the characteristics of the Bicycle of the cyclist"+"\n"+
                 "0. Terminar\n"+
                 "====================================================\n");
         return(Integer.parseInt(in.readLine()));
@@ -44,6 +45,13 @@ public class Main {
                        Basketball basketballResult = new Basketball("Team Dragon", "Team SiquiMira", 5,8);
                        System.out.println("Team winner is: "+basketballResult.getWinner());
                        break;
+                   case 5:
+                       Cyclist cyclist = new Cyclist("Rocio", "Cyclist",  1.60, 56.0);
+                       System.out.println("Cyclist");
+                       System.out.println(cyclist.displayData());
+                       System.out.println("Bicycle");
+                       System.out.println(cyclist.showDataBicycle());
+
                }
             }catch (Exception ex){
                 System.out.println(ex.getMessage());

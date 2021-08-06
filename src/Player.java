@@ -34,6 +34,7 @@ public class Player extends Person{
         return weight;
     }
 
+    @Override
     public String displayData(){
         return "Name is: "+getName()+" this in the discipline: "+getAthleticDiscipline()+" has a height of: "+getHeight()+" and a weight of:"+getWeight();
     }

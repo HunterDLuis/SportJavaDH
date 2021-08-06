@@ -30,7 +30,7 @@ public class Person {
         return name;
     }
 
-    String displayData(){
+    public String displayData(){
         return "Name is: "+getName()+" and my address is: "+address;
     }
 
