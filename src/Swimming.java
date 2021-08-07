@@ -1,40 +1,41 @@
 public class Swimming extends Player{
     String style;
     String lane;
-    String nameClud;
+    String nameClub;
     boolean startSwim;
 
-    public Swimming(){}
-
-    public Swimming(String name, int ci, String birthDate, int phone, String address, char gender, float height, int playerNumber, String position, float weight, String style, String lane, String nameClud, boolean startSwim) {
-        super(name, ci, birthDate, phone, address, gender, height, playerNumber, position, weight);
-        this.style = style;
-        this.lane = lane;
-        this.nameClud = nameClud;
+    public Swimming(boolean startSwim){
         this.startSwim = startSwim;
     }
 
-    public Swimming(String name, int ci, String birthDate, int phone, String address, char gender, float height, int playerNumber, String position, float weight) {
-        super(name, ci, birthDate, phone, address, gender, height, playerNumber, position, weight);
+    public Swimming(String style){
+        this.style = style;
     }
 
-    public String getNameClud(){
-        return nameClud;
+    public Swimming(String name, String athleticDiscipline, double height, double weight) {
+        super(name, athleticDiscipline, height, weight);
     }
 
-    boolean drop(){
-        return false;
+    public Swimming(String style, String lane, String nameClub, boolean startSwim) {
+        this.style = style;
+        this.lane = lane;
+        this.nameClub = nameClub;
+        this.startSwim = startSwim;
     }
 
-    boolean toWarm(){
-        return true;
+    public String getStyle() {
+        return style;
     }
 
-    void startSwim(boolean flag){
-        System.out.print(flag);
+    public boolean isStartSwim() {
+        return startSwim;
     }
 
-    boolean enjure(){
-        return false;
+    String startSwim(){
+        if(isStartSwim()){
+            return "the swimming competition has already started";
+        }else{
+            return  "The competition has not started yet, the competitors are waiting";
+        }
     }
 }

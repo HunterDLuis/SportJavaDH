@@ -12,7 +12,10 @@ public class Main {
                 "3. VIew that team going to play"+"\n"+
                 "4. Gets winner team of the play of basketball"+"\n"+
                 "5. Gets the characteristics of the Bicycle of the cyclist"+"\n"+
-                "0. Terminar\n"+
+                "6. Gets the data a swim participant"+"\n"+
+                "7. Gets the swimming style "+"\n"+
+                "8. Show if the swimming competition started "+"\n"+
+                "9. Finish\n"+
                 "====================================================\n");
         return(Integer.parseInt(in.readLine()));
     }
@@ -51,7 +54,19 @@ public class Main {
                        System.out.println(cyclist.displayData());
                        System.out.println("Bicycle");
                        System.out.println(cyclist.showDataBicycle());
-
+                       break;
+                   case 6:
+                       Swimming swim = new Swimming("Juana", "Swimming", 1.66, 62.0);
+                       System.out.println(swim.displayData());
+                       break;
+                   case 7:
+                       Swimming swimStyle = new Swimming("Backstroke");
+                       System.out.println("The type of swimming style is: "+swimStyle.getStyle());
+                       break;
+                   case 8:
+                       Swimming swimBegin = new Swimming(false);
+                       System.out.println(swimBegin.startSwim());
+                       break;
                }
             }catch (Exception ex){
                 System.out.println(ex.getMessage());
