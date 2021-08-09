@@ -30,7 +30,7 @@ public class Bike{
         this.price = price;
     }
 
-    public String displayBycicle(){
-        return "The Model of the bycicle is: "+getModel()+" this has a price of: "+getPrice()+" and has a hoop number of: "+getHoopNumber();
+    public String displayBicycle(){
+        return "The Model of the bicycle is: "+getModel()+" this has a price of: "+getPrice()+" and has a hoop number of: "+getHoopNumber();
     }
 }

@@ -7,7 +7,7 @@ public class Cyclist extends Player{
 
     public Cyclist(String name, String athleticDiscipline, double height, double weight, boolean state) {
         super(name, athleticDiscipline, height, weight);
-        state = state;
+        this.state = state;
     }
 
     public Cyclist(String name, int ci, String birthDate, int phone, String address, char gender, float height, int playerNumber, String position, float weight) {
@@ -29,6 +29,6 @@ public class Cyclist extends Player{
     @Override
     public String displayData(){
         return "Name is: "+getName()+" this in the discipline: "+getAthleticDiscipline()+" has a height of: "+getHeight()+" and a weight of:"+getWeight()+
-                " and state of bike is: "+isState();
+                " and the condition of his bike was fixed: "+isState();
     }
 }

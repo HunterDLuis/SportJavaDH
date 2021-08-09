@@ -54,7 +54,7 @@ public class Main {
                        System.out.println("Cyclist");
                        System.out.println(cyclist.displayData());
                        System.out.println("Bicycle");
-                       System.out.println(bike.displayBycicle());
+                       System.out.println(bike.displayBicycle());
                        break;
                    case 6:
                        Swimming swim = new Swimming("Juana", "Swimming", 1.66, 62.0, "Backstroke");
