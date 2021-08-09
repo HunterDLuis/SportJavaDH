@@ -49,7 +49,7 @@ public class Main {
                        System.out.println("Team winner is: "+basketballResult.getWinner());
                        break;
                    case 5:
-                       Cyclist cyclist = new Cyclist("Rocio", "Cyclist",  1.60, 56.0);
+                       Cyclist cyclist = new Cyclist("Rocio", "Cyclist",  1.60, 56.0,true);
                        Bike bike = new Bike("Venzo", 29);
                        System.out.println("Cyclist");
                        System.out.println(cyclist.displayData());
@@ -57,7 +57,7 @@ public class Main {
                        System.out.println(bike.displayBycicle());
                        break;
                    case 6:
-                       Swimming swim = new Swimming("Juana", "Swimming", 1.66, 62.0);
+                       Swimming swim = new Swimming("Juana", "Swimming", 1.66, 62.0, "Backstroke");
                        System.out.println(swim.displayData());
                        break;
                    case 7:

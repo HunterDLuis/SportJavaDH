@@ -12,8 +12,9 @@ public class Swimming extends Player{
         this.style = style;
     }
 
-    public Swimming(String name, String athleticDiscipline, double height, double weight) {
+    public Swimming(String name, String athleticDiscipline, double height, double weight, String style) {
         super(name, athleticDiscipline, height, weight);
+        this.style = style;
     }
 
     public Swimming(String style, String lane, String nameClub, boolean startSwim) {
@@ -37,5 +38,11 @@ public class Swimming extends Player{
         }else{
             return  "The competition has not started yet, the competitors are waiting";
         }
+    }
+
+    @Override
+    public String displayData(){
+        return "Name is: "+getName()+" this in the discipline: "+getAthleticDiscipline()+" has a height of: "+getHeight()+" and a weight of:"+getWeight()+
+                " with a style: "+getStyle();
     }
 }
