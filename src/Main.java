@@ -50,10 +50,11 @@ public class Main {
                        break;
                    case 5:
                        Cyclist cyclist = new Cyclist("Rocio", "Cyclist",  1.60, 56.0);
+                       Bike bike = new Bike("Venzo", 29);
                        System.out.println("Cyclist");
                        System.out.println(cyclist.displayData());
                        System.out.println("Bicycle");
-                       System.out.println(cyclist.showDataBicycle());
+                       System.out.println(bike.displayBycicle());
                        break;
                    case 6:
                        Swimming swim = new Swimming("Juana", "Swimming", 1.66, 62.0);

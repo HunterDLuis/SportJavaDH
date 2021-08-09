@@ -21,8 +21,8 @@ public class Cyclist extends Player{
             return true;
         }
     }
-
-    public String showDataBicycle(){
+    @Override
+    public String displayData(){
         return "Cyclist rides a bike with the following characteristics: "+bike.displayBycicle();
     }
 }
