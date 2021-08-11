@@ -22,7 +22,6 @@ public class Main {
     }
 
     private static void addPlayer(ListPlayer player) throws Exception{
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean morePlayer = true;
         String name;
         String discipline;
@@ -31,17 +30,17 @@ public class Main {
 
         while(morePlayer){
             System.out.println("Enter a name: ");
-            name = bufferedReader.readLine();
+            name = ReadKeyboard.readChain();
             System.out.println("Enter dicipline: ");
-            discipline = bufferedReader.readLine();
+            discipline = ReadKeyboard.readChain();
             System.out.println("Enter height: ");
-            height = Double.parseDouble(bufferedReader.readLine());
+            height = ReadKeyboard.readDouble();
             System.out.println("Enter weight");
-            weight = Double.parseDouble(bufferedReader.readLine());
+            weight = ReadKeyboard.readDouble();
             player.addPlayer(new Player(name, discipline, height, weight));
             System.out.println("Add more players");
             System.out.println("If your want to add more players enter 'true' otherwise enter 'false'");
-            morePlayer = Boolean.parseBoolean(bufferedReader.readLine());
+            morePlayer = ReadKeyboard.readBoolean();
         }
     }
 
