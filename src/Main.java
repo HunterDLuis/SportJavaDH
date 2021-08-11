@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Main {
     private static int menuInitial() throws Exception{
@@ -7,8 +8,8 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("\n===========================================\n"+
-                "1. Gets the datas of the player Luis"+"\n"+
-                "2. Gets list of player"+"\n"+
+                "1. Gets the data of the player Luis"+"\n"+
+                "2. Adds and show list of players"+"\n"+
                 "3. VIew that team going to play"+"\n"+
                 "4. Gets winner team of the play of basketball"+"\n"+
                 "5. Gets the characteristics of the Bicycle of the cyclist"+"\n"+
@@ -19,13 +20,38 @@ public class Main {
                 "====================================================\n");
         return(Integer.parseInt(in.readLine()));
     }
+
+    private static void addPlayer(ListPlayer player) throws Exception{
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        boolean morePlayer = true;
+        String name;
+        String discipline;
+        double height;
+        double weight;
+
+        while(morePlayer){
+            System.out.println("Enter a name: ");
+            name = bufferedReader.readLine();
+            System.out.println("Enter dicipline: ");
+            discipline = bufferedReader.readLine();
+            System.out.println("Enter height: ");
+            height = Double.parseDouble(bufferedReader.readLine());
+            System.out.println("Enter weight");
+            weight = Double.parseDouble(bufferedReader.readLine());
+            player.addPlayer(new Player(name, discipline, height, weight));
+            System.out.println("Add more players");
+            System.out.println("If your want to add more players enter 'true' otherwise enter 'false'");
+            morePlayer = Boolean.parseBoolean(bufferedReader.readLine());
+        }
+    }
+
     public static void main(String[] arg){
         int option = 0;
 
         do{
             try{
                option = menuInitial();
-
+               ListPlayer player = new ListPlayer();
                switch (option){
                    case 1:
                        Person person = new Person("Luis", 88774455, "15/08/1993",
@@ -34,10 +60,7 @@ public class Main {
                        person.calculateAge(person.getBirthDate());
                        break;
                    case 2:
-                       ListPlayer player = new ListPlayer();
-                       player.addPlayer(new Player("Juan", "Basketball", 1.70, 86.0));
-                       player.addPlayer(new Player("Rocio", "Cyclist",  1.60, 56.0));
-                       player.addPlayer(new Player("Juana", "Swimming", 1.66, 62.0));
+                       addPlayer(player);
                        player.displayPlayer();
                        break;
                    case 3:
